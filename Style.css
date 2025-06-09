@@ -1,0 +1,281 @@
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.774);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: orangered;
+  text-shadow: 0 0 25px orangered, 0 0 50px orangered;
+  transform: scale(1.1);
+}
+
+span {
+  color: orange;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  border-left: 1px solid orangered;
+  padding: 15px 35px;
+  background-color: orange;
+  color: white;
+  margin: 0 5px;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 3px solid orange;
+}
+
+.fa-shopping-cart,
+.fa-user-plus,
+.fa-birthday-cake,
+.fa-sign-in {
+  margin-right: 5px;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.side-menu {
+  width: 35%;
+  background-color: orange;
+  font-size: 25px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.side-menu ul {
+  margin-left: 10px;
+}
+
+.side-menu ul li {
+  font-weight: 200;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.side-menu ul li:hover {
+  color: #111;
+  font-weight: bold;
+}
+
+.side-menu a {
+  text-decoration: none;
+}
+
+.slider {
+  width: 65%;
+  padding: 0 10px;
+}
+
+.slider img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-box:hover {
+  transform: scale(1.05);
+}
+
+.product-box img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info i {
+  color: gold;
+}
+
+.product-info h3,
+.product-info h5 {
+  margin: 5px 0;
+}
+
+.order-form-section {
+  background: #fff3e0;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-section h2 {
+  font-size: 32px;
+  color: orangered;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.order-form label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-form input,
+.order-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order-form button {
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.order-form button:hover {
+  background-color: orangered;
+}
+
+.order-form button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+#open-menu,
+#close-menu {
+  font-size: 30px;
+  color: orange;
+  display: none;
+}
+
+.footer {
+  background: black;
+  margin-top: 5px;
+  color: white;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer h1 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.footer p {
+  font-size: 12px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar a {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border-left: none;
+  }
+
+  .navbar a:hover {
+    border-bottom: none;
+    background-color: darkorange;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .side-menu,
+  .slider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .side-menu {
+    display: none;
+  }
+
+  #open-menu {
+    display: block;
+  }
+}
+
